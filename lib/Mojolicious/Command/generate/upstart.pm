@@ -32,7 +32,7 @@ Mojolicious::Command::generate::upstart - upstart job generator command
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub run {
   my ($self, @args) = @_;

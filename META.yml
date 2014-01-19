@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Mojolicious-Command-generate-update
-version:            0.01
+version:            0.02
 abstract:           upstart job generator command
 author:
     - Stefan Adams <s1037989@cpan.org>
