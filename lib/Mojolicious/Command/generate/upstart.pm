@@ -64,14 +64,14 @@ sub run {
   }
 
   my $file = $deploy
-    ? File::Spec->join('etc', 'init', $self->app->moniker.'.conf')
+    ? File::Spec->join('', 'etc', 'init', $self->app->moniker.'.conf')
     : File::Spec->join($output, 'etc_init_'.$self->app->moniker.'.conf');
   $self->render_to_file('upstart', $file, $self->app);
   $self->chmod_file($file, 0755);
 
   # config file
   $file = $deploy
-    ? File::Spec->join('etc', 'default', $self->app->moniker)
+    ? File::Spec->join('', 'etc', 'default', $self->app->moniker)
     : File::Spec->join($output, 'etc_default_'.$self->app->moniker);
   $self->render_to_file('config', $file, $self->app);
   $self->chmod_file($file, 0644);
